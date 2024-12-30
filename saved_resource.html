@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://zandokh.com/index -->
+<html class="ui-mobile"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style><!--<base href="https://zandokh.com/index">--><base href=".">
+        <title>Welcome | REVE Chat</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com/">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link href="./google-fonts.css" rel="stylesheet">
+
+
+        <!-- <link rel="stylesheet" href="https://staging-static.revechat.com/client_2/css/revechat.min.css?2421442315-31241489-085863143-523536156789432-1123234324-34223454232-235536564-3473"> -->
+        <link rel="stylesheet" href="./revechat.min.css">
+        <!-- <link rel="stylesheet" href="http://localhost:4080/css/revechat.min.css?234234234324411"> -->
+
+        <script src="./dexie.js"></script>
+        <link rel="stylesheet" href="./litepicker.css">
+        
+        
+    <link rel="stylesheet" type="text/css" href="./style-normal.css"><link rel="stylesheet" type="text/css" href="./style-thin.css"><link rel="stylesheet" type="text/css" href="./style-light.css"><link rel="stylesheet" type="text/css" href="./style-bold.css"><link rel="stylesheet" type="text/css" href="./style-fill.css"><link rel="stylesheet" type="text/css" href="./style-duotone.css"><script type="text/javascript" src="./wavesurfer.min.js"></script><script type="text/javascript" src="./lottie-player.js"></script><script type="text/javascript" src="./marked.min.js"></script><script type="text/javascript" src="./browser.js"></script><script type="text/javascript" src="./litepicker.js"></script><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style><style type="text/css">.first-chat-message .reply-send-preview-card .content::before { background:#ffffff;opacity:0.4; }</style><style type="text/css">.first-chat-message .reply-msg-section .left .ph-arrow-bend-up-left { color:#ffffff }</style></head>
+    <body class="ui-mobile-viewport ui-overlay-a"><div data-role="page" data-url="/index" tabindex="0" class="ui-page ui-page-theme-a ui-page-active" style="">
+
+
+            <!-- Start Bot Design  -->
+
+                    <div id="incomingTextMessage" style="display:none;">
+
+                    <div class="second-chat-message"> <i class="icon icon_profile_1" style="background: url(&#39;./bot/avatar/BOT-Avatar-5.png&#39;);float: left; background-color:#eee;border: 1px solid #ccc;">
+
+                        </i>
+
+                        <div class="msgbox secondbox" sender_name="Cheng"> <i class="icon-caret-left" style="color:#ffffff"></i>
+
+                            <div>
+
+                            <p>Hi, Thanks for visiting us
+
+                                again. Hope you are doing great. How may I help you today?</p>
+
+                            </div>
+
+                        </div>
+
+                        <div style="clear:both"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div id="botCarouselElement" class="botcart-carousel" style="display: none">
+                        <div class="carousel-elements"> </div>
+                        <button class="navigation nav-left ui-btn ui-shadow ui-corner-all" id="nav-left">
+                            <i class="ph ph-caret-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="navigation nav-right ui-btn ui-shadow ui-corner-all" id="nav-right">
+                            <i class="ph ph-caret-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+
+
+                    <div id="carouselElement" class="msgbox secondbox message agent card" style="display: none;">
+
+                        <h2>Item List</h2> <span>Item1, Item2 and Item3.</span>
+
+                        <div class="button"><a href="https://zandokh.com/index" class="ui-link">Choose it</a></div>
+
+                    </div>
+
+
+
+                    <a id="quickReplyElement" href="https://zandokh.com/index#" class="button-option ui-link" style="display: none">Small</a>
+
+            <!-- END Bot Design  -->
+
+
+
+
+            <!-- this tag will be used for MSIE  -->
+            <bgsound id="sound">
+            <!-- html5 audio supporting browsers will use this player -->
+            <audio id="player">
+                <source id="mp3PlayerSource" type="audio/mpeg" src="https://static.revechat.com/client/sound/notify.mp3">
+                <source id="oggPlayerSource" type="audio/ogg" src="https://static.revechat.com/client/sound/notify.ogg">
+                <source id="wavPlayerSource" type="audio/wav" src="https://static.revechat.com/client/sound/notify.wav">
+            </audio>
+
+            <!-- an <object> element will be injected here dynamically -->
+            <div id="swfPlayer">
+
+            </div>
+
+
+            <div id="eye-catcher-holder"></div>
+
+            <div id="trigger-message-box" class="trigger-message-box" style="display: none;">
+
+            </div>
+
+
+
+            <!-- chat widget -->
+            <div id="reve-chat-widget-body" style="bottom: 0px; display: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 28px 0px; right: 0px; height: 670px;" class="modern-theme-body"> <!--animated slideInUp-->
+
+
+            </div>
+
+            <!--html for new banner (online)-->
+
+
+
+
+
+
+        <div id="client_html_body">
+        <div data-template="">
+
+            <!-- start chat launching window online here -->
+            <div class="chat_launching_window_online hidden">
+                <div class="chat-main" id="chat-launching-window-online">
+
+                    <div class="chat-window-header drag" style="background: none;">
+                        <!-- <div class="prechat-window-header">
+                            <div class="left">
+                                <span id="homeViewNav" class="icon-angle-left"></span>
+                            </div>
+                            <div class="right">                                
+                                <div id="header-group-image-online" class="agent-group">
+                                    <img src="../../images/1.png" alt="">
+                                    <img src="../../images/2.png" alt="">
+                                    <img src="../../images/3.png" alt="">
+                                    <img src="../../images/4.png" alt="">
+                                    <img src="../../images/5.png" alt="">
+                                </div>
+                                <div class="business-info">
+                                    <h2 id="header-brand-name-online" class="title header-brand-name-online">Your Business Name</h2>
+                                    <p id= "header-secondary-message-online" class="text">We typically reply within 3 minute</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                        <!-- <div class="right-chat-window-header">
+                            <p class="chatWindowText previewText" id="chatWindowTextOnline">Chat with us</p>
+                            <div class="icons minimize_button">
+                                <a href="#" class="tooltips">
+                                    <i class="icon-chevron-down"></i>
+                                    <span>Minimize</span>
+
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+                    <!--removed all the label from here-->
+
+                    <div class="chat-form-info">
+                        <div class="start-prechat-form-wrapper">
+                            <h2 class="form-card-title">Pre-chat form</h2>
+                            <div class="welcome-message" id="text-show-more-less">
+                            <p id="launch-msg">Welcome to our live chat support! 
+Our customer service will replies back soon.</p>
+                            <div class="show-more" style="color:#004FFF;background:#FFFFFF">...See More</div>
+                            </div>
+                            <div class="fb-google-login">
+                                <span id="online_google_facebook_login_text_label">Sign in with</span>
+                                <div class="social-btn-group">
+                                    <a href="https://zandokh.com/index#" class="btn btn-primary ui-link" id="google_sign_in_online">
+                                        <img src="./google.svg">
+                                        <span class="label">Google</span>
+                                    </a>
+                                    <a href="https://zandokh.com/index#" class="btn btn-primary ui-link" id="facebook_login_button_online">
+                                        <img src="./facebook.svg">
+                                        <span class="label">Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="or_line">
+                                    <span id="online_social_login_or_label"> Or </span>
+                                </div>
+                            </div>
+    
+                            <p id="chat-form-error"></p>
+    
+                            <div class="form-row chat-online-form-language-chooser hidden">
+    
+                            </div>
+    
+                            <div class="pre-chat-actions-wrapper"></div>
+    
+    
+                            <p class="chat-button start-chat-btn-class">
+                                <button name="submit" type="button" class="submit-btn ui-btn ui-shadow ui-corner-all" id="start-chat-btn" style="background: rgba(22, 138, 255, 0.1); border: 1px solid rgb(22, 138, 255);">
+                                    Start Chat
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="internet-connection-status failed" style="display: none;">
+                        <span class="icon-wifi-slash icon"></span>
+                        <span class="text">No internet. Trying to connect...</span>
+                    </div>
+
+                    <div class="otp-wrapper" style="display: none;">
+                        <div class="verify-number-card-wrapper">
+                            <div class="otp-modal-close"><i class="ph ph-x"></i></div>
+                            <img id="otp-sending-image" alt="" src="./DeviceMobileOTP.svg">
+                            <h2 class="title">Verify your number</h2>
+                            <p class="text">
+                                Enter the verification code we sent to
+                                (<span class="otp-cc">316</span>) <span class="otp-number">555-0116</span>
+                            </p>
+                            <div class="input-group">
+                                
+                            </div>
+                            <p class="incorrect-text" style="display: none; color:red;">Incorrect OTP</p>
+                            <div class="verify-status">
+                                <h2 class="title">Didn’t receive code?</h2>
+                                <p class="text otp-expired">You may request a new code in <span class="remaining-time">00:00</span></p>
+                                <p class="text otp-request-again" style="display: none; text-decoration: underline; cursor: pointer;">Request code again</p>
+                            </div>
+                            <button class="submit-btn ui-btn ui-shadow ui-corner-all">Submit</button>
+                        </div>
+                    </div>
+
+                
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+            </div>
+            <!-- end chat launching window online here -->
+
+
+            <!-- start customized chat launching window online here -->
+                <div class="customized_chat_launching_window_online hidden">
+                    <div class="chat-main" id="chat-launching-window-online">
+
+                        <div class="chat-window-header drag" style="background: none;">
+                            <div class="right-chat-window-header">
+                                <p class="chatWindowText previewText" id="chatWindowTextOnline" style="color: rgb(255, 255, 255);">Chat with us</p>
+                                <div class="icons minimize_button">
+                                    <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                        <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                        <span>Minimize</span>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--removed all the label from here-->
+
+                    <div class="chat-form-info">
+                        <div class="large-logo-container">
+                        <img id="inline-message-logo" src="https://zandokh.com/index" class="">
+
+                            <!-- <p></p>  -->
+                        </div>
+
+                            <div class="fb-google-login">
+                                <span id="online_google_facebook_login_text_label">Sign in with </span>
+                                <a href="https://zandokh.com/index#" id="facebook_login_button_online" class="ui-link">
+                                    <i class="icon-f"></i>
+                                </a>
+                                <a href="https://zandokh.com/index#" id="google_sign_in_online" class="ui-link">
+                                    <i class="icon-google-plus2"></i>
+                                </a>
+                                <div class="or_line">
+                                    <span id="online_social_login_or_label"> Or </span>
+                                </div>
+                            </div>
+
+
+                            <div class="tbl-layout">
+                                <div class="tbl-cell">
+                                    <ul class="text-list-banner">
+                                        <li>
+                                            
+                                        </li>
+                                        <li>
+                                            
+                                        </li>
+
+                                    </ul>
+
+                                    <p id="chat-form-error"></p>
+
+                                    <div class="form-row chat-online-form-language-chooser hidden">
+
+                                    </div>
+
+                                    <div class="form-row chat-online-form-name">
+                                        <!--  <div class="form-label">Name</div> -->
+                                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input maxlength="200" class="input chat-name" id="chat-start-name" placeholder="Your name" name="name" type="text"></div>
+                                    </div>
+                                    <div class="form-row chat-online-form-email">
+                                        <!--   <div class="form-label">Email</div> -->
+                                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input maxlength="64" class="input chat-email" id="chat-start-email" placeholder="Your email" name="email" type="email"></div>
+                                    </div>
+
+                                    <!--new added select box-->
+                                    <div class="form-row">
+                                        <label></label>
+                                        <div class="ui-select"><div id="select-30-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow"><span class="questions">  </span><select class="questions">
+
+                                            <option>  </option>
+                                            <option>  </option>
+                                            <option>  </option>
+                                            <option>  </option>
+
+                                        </select></div></div>
+                                    </div>
+
+                                    <div class="form-row  chat-online-form-phone">
+                                        <!-- <div class="form-label">Phone No</div> -->
+                                        <div>
+
+                                            <div style="float: left;width: 100%">
+                                                <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input maxlength="50" class="input chat-contact" placeholder="Mobile No" id="chat-start-contact" name="contact_no" type="text"></div>
+                                            </div>
+                                            <!--added a div for clear-->
+                                            <div style="clear: both"></div>
+
+                                        </div>
+                                        <!--removed extra p tag from here-->
+                                    </div>
+
+                                    <div id="dept_dropdown_div" class="form-row" style="display:none">
+                                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-state-disabled ui-shadow-inset"><input id="dept_dropdown_value" type="text" disabled=""></div>
+                                        <ul id="dept_dropdown_list">
+                                        </ul>
+                                    </div>
+
+
+                                    <p class="chat-button start-chat-btn-class">
+                                        <button name="submit" type="button" class="submit-btn ui-btn ui-shadow ui-corner-all" id="start-chat-btn">
+                                            Start Chat
+                                        </button>
+                                    </p>
+                                </div>
+                <div class="tbl-cell right-add-image">
+                <img id="welcome-msg-logo" class="" src="https://zandokh.com/index">
+                </div>
+                            </div>
+
+                        </div>
+                    
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+                </div>
+                <!-- end customized chat launching window online here -->
+
+            <!-- start chat launching window offline here -->
+            <div class="chat_launching_window_offline hidden">
+                <div class="chat-main four-fields" id="chat-launching-window-offline">
+
+
+                    <div class="chat-window-header" style="background: none;">
+                        <div class="right-chat-window-header">
+                            <p class="chatWindowText previewText" id="chatWindowTextOffline" style="color: rgb(255, 255, 255);">Leave a Message</p>
+                            <div class="icons minimize_button">
+                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                    <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                    <span>Minimize</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-form-info">
+
+                    <div class="offline-table-container">
+                        <div class="offline-table-cell-container" id="launch-msg-offline">Our agents are offline now. Please leave a Message</div>
+                    </div>
+
+
+
+
+
+                        <div class="fb-google-login">
+                        <span id="offline_google_facebook_login_text_label">Sign in with</span>
+                            <a href="https://zandokh.com/index#" id="facebook_login_button_offline" class="ui-link">
+                            <i class="icon-f"></i>
+                            </a>
+                            <a href="https://zandokh.com/index#" id="google_sign_in_offline" class="ui-link">
+                            <i class="icon-google-plus2"></i>
+                            </a>
+                            <div class="or_line off">
+                            <span id="offline_social_login_or_label"> Or </span>
+                            </div>
+                        </div>
+
+                        <!--new error-row class added-->
+                        <!--removed all the label from here-->
+
+                        <div class="form-row error-row">
+                            <label id="chat-offline-form-error" style="color: red;font-size: 12px"></label>
+                        </div>
+
+                        <div class="form-row chat-offline-form-name">
+                            <!--<div class="form-label">Name</div> -->
+                            <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><label>Name</label><input class="input chat-name-offline" maxlength="200" id="chat-name-offline" placeholder="Your name (required)" name="name" type="text"></div>
+                        </div>
+
+                        <div class="form-row chat-offline-form-email">
+                            <!-- <div class="form-label">Email</div> -->
+                            <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><label>Email</label><input class="input chat-email-offline" maxlength="64" id="chat-email-offline" placeholder="Your email (required)" name="email" type="email"></div>
+                        </div>
+
+                        <div class="form-row chat-offline-form-phone">
+                        <!--    <div class="form-label">Phone No</div> -->
+
+                            <div style="float: left;width: 100%"><label>Phone</label>
+                                <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input class="input" maxlength="50" id="chat-contact-offline" placeholder="Your phone (optional)" name="phone" type="text"></div>
+                            </div>
+
+                            <div style="clear: both;"></div>
+
+                        </div>
+
+                        <div class="form-row chat-offline-form-subject">
+                            <!--<div class="form-label">Subject</div> -->
+                            <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><label>Subject</label><input class="input" id="chat-sub-offline" maxlength="80" placeholder="Subject (required)" name="subject" type="text"></div>
+                        </div>
+
+                        <div class="form-row chat-offline-form-message">
+                        <!--  <div class="form-label">Message</div> -->
+                            <textarea rows="3" id="chat-message-offline" maxlength="450" placeholder="Type your message here." class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow"></textarea>
+                        </div>
+
+                        <input class="input" id="previous-chat-status" name="previous-chat-status" type="hidden">
+
+                        <p class="chat-button start-chat-btn-class">
+                            <button name="submit" class="submit-btn ui-btn ui-shadow ui-corner-all" type="submit" id="send-offline-message" style="color: rgb(255, 255, 255);">Send Message</button>
+                        </p>
+
+                    </div>
+
+                
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+            </div>
+            <!-- end chat launching window offline here -->
+
+            <div class="chat_launching_window_offline_notification hidden">
+                <div class="chat-main" id="chat-launching-window-offline-notification">
+
+
+                    <div class="chat-window-header" style="background: none;">
+                        <div class="right-chat-window-header">
+                            <p class="chatWindowText previewText" id="chatWindowTextOffline">Leave a message</p>
+                            <div class="icons minimize_button">
+                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                    <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                    <span>Minimize</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-form-info offline-msg-media-image-container">
+
+                    <div class="offline-table-container">
+                        <div class="offline-table-cell-container">
+                            We are not available right now. Leave your message and we will get back to you as soon as possible.
+                        </div>
+                    </div>
+
+
+
+
+                    </div>
+
+                
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+            </div>
+            <!-- end chat launching window offline here -->
+
+            <!-- start queue window here -->
+            <div class="queue-message-window hidden">
+                <div class="chat-main" id="queue-message-window">
+
+                    <div class="chat-window-header" style="background: none;">
+                        <div class="right-chat-window-header" id="chat-window-background1">
+                            <p id="chatWindowHeaderText1" class="previewText" style="color: rgb(255, 255, 255);">Chat with us</p>
+                            <div class="icons minimize_button">
+                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                    <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                    <span>Minimize</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-form-info">
+                    <div class="queuing-msg-wrapper">
+                        <img alt="queue img" src="./queue-screen-img.png">
+                        <p id="queuing-msg"></p>
+                        <p class="chat-button">
+                            </p><div class="ui-btn ui-input-btn ui-corner-all ui-shadow">Chat again<input name="submit" value="Chat again" class="submit-btn resend-chat-request" type="button" style="background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%); color: rgb(255, 255, 255);"></div>
+
+                        <p></p>
+                    </div>
+
+                    </div>
+
+                
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+            </div>
+            <!-- end queue window -->
+
+
+        <!-- start co-browsing support code window here -->
+        <div class="co-browsing-support-code-window hidden">
+                <div class="chat-main chat-window" id="co-browsing-support-code-window">
+
+                    <div class="chat-window-header" style="background: none;">
+                        <div class="right-chat-window-header" id="chat-window-background1" style="text-align: center; background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                            <p id="chatWindowHeaderText1" class="previewText">Co-browse by Code</p>
+                                <div class="icons minimize_button">
+                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                    <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                    <span>Minimize</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-form-info">
+                        <div class="support-code-msg-wrapper">
+                        <div>Please share this code with our representative for starting the co-browsing session. </div>
+
+                        <code id="support-code" class="code support-code">
+
+                        </code>
+                    </div>
+
+                </div>
+            
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+        </div>
+        <!-- end co-browsing support code window -->
+
+
+
+            <!-- start chat window here -->
+            <div class="visitor-chat-window hidden">
+                <div class="chat-main chat-window" style="margin-top: 0px; clear: both;" id="visitor-chat-window">
+
+                    <div class="chat-window-header modern-theme-window-header" style="background: none;">
+                        <!-- <div class="right-chat-window-header" id="chat-window-background2">
+                            <p id="chatWindowHeaderText2" class="previewText">Chat with us</p>
+
+                            <div class="icons chat-close-button waiting-window-chat-close" style="padding-right: 5px; display:none" >
+
+                                <a href="#" class="tooltips">
+                                <i class="icon-Close-Chat-new"></i>
+                                <span>Close Chat</span>
+                                </a>
+                            </div>
+
+                            <div class="icons minimize_button" style="padding-right: 5px; display: none;" >
+
+                                <a href="#" class="tooltips">
+                                    <i class="icon-chevron-down"></i>
+                                    <span>Minimize</span>
+                                </a>
+
+                            </div>
+
+                        </div> -->
+
+
+
+
+                        
+                        
+
+
+
+
+                        <!--
+                            start voice/video chat control panel
+                        -->
+
+                        <div id="voice-panel-module" style="display:none">
+
+                            <div class="voice-call-div" style="background: transparent;">
+
+                                <!--top bar agent info section added-->
+                                <div class="agent-info-wrapper">
+                                    <div class="left">
+                                        <span id="homeViewNav" class="icon-arrow-left"></span>
+                                    </div>
+                                    <!-- default and light theme's profile picture will goes here-->
+                                    <div class="agent-profile-img">
+                                    </div>
+                                    <!-- default and light theme's profile picture End-->
+
+                                    <!-- Modern theme's profile picture will goes here-->
+                                    <div class="agent-profile-img-modern" style="display: none;">
+                                        <div class="profile-img-content">
+
+                                            <div class="profile-img"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Modern theme's profile picture end -->
+
+                                    <div class="agent-info-text">
+                                        <div class="agent-info-details">
+                                            <p class="support-agent-name" style="color: rgb(255, 255, 255);"></p>
+                                            <span class="support-agent-designation" style="color: rgb(255, 255, 255);"></span>
+                                        </div>
+                                        <ul class="topbar-icon-list">
+
+                                            <!-- <li class="icons chat-close-button" style="padding-right: 5px;">
+                                                <a href="#" class="tooltips">
+                                                    <i class="icon-Close-Chat-new"></i>
+                                                    <span>Close Chat</span>
+                                                </a>
+                                            </li> -->
+                                            <li class="icons minimize_button" style="padding-right: 5px;">
+                                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                                    <i class="icon-x"></i>
+                                                    <span>Minimize</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="company-logo-img">
+                                    <!-- <img src="../images/company-logo.png" alt="company-logo" /> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div> <!-- -->
+
+                    </div>
+
+                    <!--changed the height in inline style-->
+
+                    <!--  voice/video call start-->
+                    <div class="voice-video-call-container">
+                        <div class="camera-control">
+                            <a href="https://zandokh.com/index#" class="rotate-camera ui-link" style=""><i class="icon-camera_rotate"></i></a>
+                            <span id="statusText" class="status-text"></span>
+                            <span id="timeDisplay" class="display-time"><i class="icon-clock2"></i> 00:00:00</span>
+                        </div>
+
+                        <ul class="voice-call-avatar-wrapper" style="display: none;">
+                            <li>
+                                <img alt="list-img" src="./audio-call-avatar.png">
+                            </li>
+                            <li>
+                                <span class="icon-uniE762"></span>
+                                <span class="icon-tab"></span>
+                            </li>
+                            <li>
+                                <img alt="list-img">
+                            </li>
+                        </ul>
+                        <ul class="video-call-avatar-wrapper" style="display: none;">
+                            <li>
+                                <span class="icon-video_mute"></span>
+                                <span>Agent's camera is off</span>
+                            </li>
+                        </ul>
+                        <ul class="screen-share-avatar-wrapper" style="display: none;">
+                            <li>
+                                <span class="icon-screen-sharing"></span>
+                                <span>Screen Sharing is Running</span>
+                            </li>
+                        </ul>
+
+                        <video id="remoteVideoPlayer" autoplay="" playsinline="" class="remote-video-player"></video>
+
+                        <div class="local-video-player call-sender-viedo-wrapper">
+                            <img alt="list-img" style="display: none;" src="./audio-call-avatar.png">
+                            <video id="localVideoPlayer" autoplay="" playsinline="true"></video>
+                        </div>
+
+                        <div class="control-panle-of-video">
+                            <ul>
+
+                                <li id="screenShareButtonInternal" class="screenShareButton" style="display: none;"><a href="https://zandokh.com/index#" class="active ui-link"><i aria-hidden="true" class="icon-screen-sharing"></i></a></li>
+
+                                <li class="volumn-button-container" style="display: none;">
+                                    <div class="call-volume-slider-warrper" style="display: none;">
+                                        <div class="volumn-slider" style="display: none;"></div>
+                                        <div class="ui-slider"><input class="input-range ui-shadow-inset ui-body-inherit ui-corner-all ui-slider-input" orient="vertical" type="range" step="0.1" value="1" min="0" max="1"><div role="application" class="ui-slider-track ui-shadow-inset ui-bar-inherit ui-corner-all"><a href="https://zandokh.com/index#" class="ui-slider-handle ui-btn ui-shadow" role="slider" aria-valuemin="0" aria-valuemax="1" aria-valuenow="1" aria-valuetext="1" title="1" aria-labelledby="undefined-label" style="left: 100%;"></a></div></div>
+                                    </div>
+                                    <a href="https://zandokh.com/index#" class="volumn-button ui-link"><i id="remoteAudioSoundButton" aria-hidden="true" class="icon-speaker_v"></i></a>
+                                </li>
+
+                                <li><a href="https://zandokh.com/index#" id="muteUnmuteButton" class="ui-link"><i aria-hidden="true" class="icon-audio"></i></a></li>
+                                <li style="">
+                                    <a href="https://zandokh.com/index#" title="Video Call" id="enableDisableVideo" class="ui-link"><i aria-hidden="true" class="icon-video"></i></a>
+                                </li>
+                                <li>
+                                    <a style="" id="cancelButton" href="https://zandokh.com/index#" class="end-call ui-link" title="End call">
+                                        <i aria-hidden="true" class="icon-receiver"></i>
+                                    </a>
+                                    <a style="display: none;" id="endButton" href="https://zandokh.com/index#" class="end-call ui-link" title="End call">
+                                        <i aria-hidden="true" class="icon-receiver"></i>
+                                    </a>
+                                </li>
+                                <li style="display: none;">
+                                    <a id="chat-on-off" href="https://zandokh.com/index#" title="Chat" class="chat-on-off ui-link"><i aria-hidden="true" class="icon-chat1"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  voice/video call end-->
+
+
+                    <div class="chat-form-info" style="overflow:hidden; overflow-y: auto; height:280px">
+                        <div class="otp-wrapper" style="display: none;">
+                            <div class="verify-number-card-wrapper">
+                                <div class="otp-modal-close"><i class="ph ph-x"></i></div>
+                                <img id="otp-sending-image" alt="">
+                                <h2 class="title">Verify your number</h2>
+                                <p class="text">
+                                    Enter the verification code we sent to
+                                    (<span class="otp-cc">316</span>) <span class="otp-number">555-0116</span>
+                                </p>
+                                <div class="input-group">
+                                    <span><div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" class="input-field"></div></span>
+                                    <span><div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" class="input-field"></div></span>
+                                    <span><div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" class="input-field"></div></span>
+                                    <span><div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="number" class="input-field"></div></span>
+                                </div>
+                                <p class="incorrect-text" style="display: none; color:red;">Incorrect OTP</p>
+                                <div class="verify-status">
+                                    <h2 class="title">Didn’t receive code?</h2>
+                                    <p class="text otp-expired">You may request a new code in <span class="remaining-time">00:00</span></p>
+                                    <p class="text otp-request-again" style="display: none; text-decoration: underline; cursor: pointer;">Request code again</p>
+                                </div>
+                                <button class="submit-btn ui-btn ui-shadow ui-corner-all">Submit</button>
+                            </div>
+                        </div>
+                        <!--  chat send to email end-->
+
+                            <div class="send-email-wrapper" style="display:none">
+                                <div class="send-email-card">
+                                    <h2 class="title">Email Chat Receipt</h2>
+                                    <p class="paragraph">Please enter your email address</p>
+                                    <div class="email-trans">
+                                        <label class="label">Your Email</label>
+                                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="email" placeholder="Email address" class="input" maxlength="64"></div>
+                                        <div class="btn-group">
+                                            <button class="submit-btn ui-btn ui-shadow ui-corner-all" type="button" style="background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%); color: rgb(255, 255, 255);">Send</button>
+                                            <a class="cancel-btn ui-link" href="https://zandokh.com/index">Cancel</a>
+                                            <!-- <span class="cancel-btn">Cancel</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="close-chat-wrapper" class="close-chat-wrapper" style="display:none">
+                                <div class="close-chat-card">
+                                    <img src="./ChatCircleClose.svg">
+                                    <h2 class="title">Are you sure you want to close the conversation?</h2>
+                                    <p class="paragraph"></p>
+                                    <div class="email-trans">
+                                        <div class="btn-group">
+                                            <button class="submit-btn ui-btn ui-shadow ui-corner-all" type="button" id="continueConversationButton" style="background: rgb(22, 138, 255); color: rgb(255, 255, 255);">Continue conversation</button>
+                                            <a class="cancel-btn ui-link" id="closeChatConfirmButton" href="https://zandokh.com/index">Close conversation</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <!--   chat send to email end-->
+
+
+                        <div id="chat_message_area" class="chat_message_area" style="overflow:hidden">
+
+                            <p id="system-launch-msg"></p>
+
+                           
+                        </div>
+                        <!-- Start Bot Design  -->
+
+                        <div id="quickReplyCarouselContainer" style="display:none; overflow:hidden">
+
+                            <div style="margin:0px 27px 0px 27px; overflow: hidden">
+
+                            <div id="quickReplyCarouselContainerElement" class="botcart-buttons"></div>
+
+                            </div><button class="navigation quick-reply nav-left ui-btn ui-shadow ui-corner-all" id="QRnavLeft"><i class="icon-caret-left" aria-hidden="true"></i></button>
+
+                            <button class="navigation quick-reply nav-right ui-btn ui-shadow ui-corner-all" id="QRnavRight"><i class="icon-caret-right" aria-hidden="true"></i></button>
+
+                        </div>
+
+                        <!-- End Bot Design  -->
+                    </div>
+
+                    <div class="typing-text-show-new-main" messagetype="visitor" id="typing-view">
+                        <div class="second-chat-message typing-view">
+                            <div class="left">
+                                <!-- ${htmlContentOfAvatar} -->
+                            </div>
+                            <div class="right">
+                                <div class="agent-info-heading"><span class="title"></span></div>
+                                <div class="agent-message-wrapper typing-agent-message-wrapper">
+                                <div class="msgbox secondbox" sender_name="Agent">
+                                    
+                                <div class="typing-text-show-new">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+            
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="internet-connection-status failed" style="display: none;">
+                        <span class="icon-wifi-slash icon"></span>
+                        <span class="text">No internet. Trying to connect...</span>
+                    </div>
+
+                    <div class="start-chat-again-section" style="display: none;">
+                        <div class="internet-blur" style="display: none;"></div>
+                        <button type="button" class="submit-btn ui-btn ui-shadow ui-corner-all" id="start-chat-again-btn" style="color: rgb(255, 255, 255);">
+                            Start Chat Again
+                        </button>
+                    </div>
+
+                    <!-- multifile upload html -->
+                    <div class="collapse-container">
+                        <div class="multi-upload-collapse" style="display: none;">
+                            <div class="expand-bar" id="expand-bar">
+                                <div class="left">
+                                    <h2 class="title header">1 of 4 files uploading</h2>
+                                    <div class="nb-spinner" style="display: none;"></div>
+                                    <span class="icon-checkmark icon-checkmark-js" style="display: none;"></span>
+                                </div>
+                                <div class="right">
+                                    <span class="icon-chevron-down ricon" style="color: rgb(255, 255, 255);"></span>
+                                </div>
+                            </div>
+                            <div class="collapse">
+                                <div class="collapse-content">
+                                    <div class="more-file-upload-btn">
+                                        <div class="icon-wrapper">
+                                            <!-- <span class="icon-add-solid"></span> -->
+                                            <span class="ph ph-plus"></span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="collapse-item">
+                                        <div class="upload-collapse-file-card">
+                                            <img src="../images/pdf.svg" alt="pdf">
+                                            <div class="info">
+                                                <h2 class="title">Financial Fre..</h2>
+                                                <p class="text"> 2.6 MB, PDF </p>
+                                            </div>
+                                        </div>
+                                        <span class="icon-x remove-btn"></span>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="reve-voice-record-container">
+                        <span class="recodingTooltipText tooltiptext" style="display: none;">Keep saying and send your voice note</span>
+                        <div class="reve-voce-recording-wrapper voice-chat-recording-selector-v2" style="display: none;">
+                            <button class="clear-btn cancel-voice-recording-button ui-btn ui-shadow ui-corner-all">
+                                <i class="ph ph-x cancel-voice-recording"></i>
+                            </button>
+                            <div class="dotted-style">
+                                <lottie-player background="transparent" speed="1" style="max-width: 100px;" loop="" autoplay="" src="https://static.revechat.com/images/equilizer.json"><template shadowrootmode="open"><!----> <div id="animation-container" lang="en" role="img" class="main" aria-label="Lottie animation">
+      <div id="animation" class="animation" style="background:transparent;">
+        <!--?lit$1924559706$-->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clippath id="__lottie_element_534"><rect width="1920" height="1080" x="0" y="0"></rect></clippath></defs><g clip-path="url(#__lottie_element_534)"><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,157.1768035888672,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,80.78457641601562,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,600.9089965820312,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,386.2637939453125,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,500.80682373046875,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,615.350830078125,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,729.893798828125,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,844.4368286132812,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,958.9797973632812,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,1073.5238037109375,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,997.130615234375,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,600.9089965820312,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,1302.6097412109375,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g><g transform="matrix(0.6000000238418579,0,0,0.6000000238418579,1417.1536865234375,539.844970703125)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,282.6820068359375,0)"><path fill="rgb(255,255,255)" fill-opacity="1" d=" M50,0 C50,0 50,0 50,0 C50,27.594999313354492 27.594999313354492,50 0,50 C0,50 0,50 0,50 C-27.594999313354492,50 -50,27.594999313354492 -50,0 C-50,0 -50,0 -50,0 C-50,-27.594999313354492 -27.594999313354492,-50 0,-50 C0,-50 0,-50 0,-50 C27.594999313354492,-50 50,-27.594999313354492 50,0z"></path></g></g></g></svg></div>
+      <!--?lit$1924559706$-->
+    </div></template>
+                                </lottie-player>
+                            </div>
+                            <div class="record-timing-send-area">
+                                <div class="record-watch">
+                                    <span class="circle-icon"></span>
+                                    <span class="time revechat-recording-timer-v2"></span>
+                                </div>
+                                <button class="send-record ui-btn ui-shadow ui-corner-all">
+                                    <i class="ph-fill ph-paper-plane-right voice-message-send-btn-v2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="emoji-picker-container"></div>
+
+                    <div class="comment-box">
+                        <div class="internet-blur" style="display: none;"></div>
+                        <div class="comment-field">
+                            <div class="text-area-emoji-holder">
+                                <textarea placeholder="Write your message" rows="1" style="width: 100%" class="msg-textarea chat-input-text ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow"></textarea>
+                                
+                                <span class="emoji-trigger-button icon-Emo-new" style="cursor: pointer; font-size: 18px;"></span>
+                            </div>
+                            <!-- <div class="dot-more-options"><a href="#">
+                                <i class="icon-three-dot"></i></a>
+                            </div> -->
+
+                            <div class="send-and-recording-holder">
+                                <div style="display: none; background: rgba(22, 138, 255, 0.15);" class="text-send-btn">
+                                    <span class="tooltiptext">Cannot send while uploading in progress</span>
+                                    <i class="ph-fill ph-paper-plane-right commonMessageSendIcon" id="send-chat-message" style="background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"></i>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    <span id="maxCharLengthInCommentField">Maximum characters exceeded!</span>
+                        
+                    </div> <!-- -->
+
+            
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+
+        <!-- end of chat-main  -->
+
+                </div>
+
+            <!-- end chat window here-->
+
+            <!-- start post chat survey form -->
+            <!-- <div class="post-chat-survey-form hidden" > -->
+
+                <!-- <div class="chat-main"> -->
+
+                    <!-- <div class="chat-window-header">
+                        <div class="right-chat-window-header" id="chat-window-background3">
+                            <p class="chatWindowText previewText">Chat with us</p>
+                            <div class="icons minimize_button">
+                                <a href="#" class="tooltips">
+                                    <i class="icon-chevron-down"></i>
+                                    <span>Minimize</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div id="post-chat-survey-form" class="post-chat-survey-form hidden">
+                        <!--new section added for rating-->
+                        <div class="rating-wrapper-parent">
+                            <div class="rating-wrapper">
+                                <p class="greeting-msg">Thanks for your time. Rate your experience to help us improve our service quality</p>
+                               
+                                <div class="survey-show-digit">
+                                    <div class="rating">
+                                        <div class="ui-radio"><label class="icon-star-full ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" for="star1" title="Poor"></label><input type="radio" class="ratingInput" id="star1" name="rating" value="1" title="Poor"></div>
+                                        <div class="ui-radio"><label class="icon-star-full ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" for="star2" title="Fair"></label><input type="radio" class="ratingInput" id="star2" name="rating" value="2" title="Fair"></div>
+                                        <div class="ui-radio"><label class="icon-star-full ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" for="star3" title="Average"></label><input type="radio" class="ratingInput" id="star3" name="rating" value="3" title="Average"></div>
+                                        <div class="ui-radio"><label class="icon-star-full ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" for="star4" title="Good"></label><input type="radio" class="ratingInput" id="star4" name="rating" value="4" title="Good"></div>
+                                        <div class="ui-radio"><label class="icon-star-full ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-radio-off" for="star5" title="Excellent"></label><input type="radio" class="ratingInput" id="star5" name="rating" value="5" title="Excellent"></div>
+                                    </div>
+                                </div>
+                                <div class="rating-text">Select to rate</div>
+                            
+                                <div class="submit-btn-wrapper">
+                                    <button name="submit" type="button" class="rating-btn submit-btn submit-feedback-btn ui-btn ui-shadow ui-corner-all" style="display: none; background: rgba(22, 138, 255, 0.1); border: 1px solid rgb(22, 138, 255); color: rgb(22, 138, 255);">
+                                        <div class="nb-spinner" style="display: none; border-top-color: rgb(22, 138, 255); border-left-color: rgb(22, 138, 255); border-bottom-color: rgb(22, 138, 255);"></div>
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+            <!-- </div> -->
+        <!-- </div> -->
+            <!-- end post chat survey form -->
+
+            <!-- start post chat greetings form -->
+            <div class="post-chat-greetings-form hidden">
+                <div class="chat-main" style="margin-top: 0px; clear: both;" id="post-chat-greetings-form">
+                    <div class="chat-window-header" style="background: none;">
+                        <div class="right-chat-window-header" id="chat-window-background4">
+                            <p class="chatWindowText previewText">Chat with us</p>
+                            <div class="icons minimize_button">
+                                <a href="https://zandokh.com/index#" class="tooltips ui-link">
+                                    <i class="icon-chevron-down" style="color: rgb(255, 255, 255);"></i>
+                                    <span>Minimize</span>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="chat-form-info">
+                    <div class="post-chat-gretting-wrapper">
+
+                        <p id="final-greeting-msg">Thanks for your feedback and time. Have a nice day!</p>
+
+                    <!-- <p style="text-align: center">
+                            <input id="emailSenderButton" name="submit" value="Email Transcript" class="submit-btn" type="button" />
+                        </p> -->
+
+                        <p>
+                            </p><div class="ui-btn ui-input-btn ui-corner-all ui-shadow">Chat Again<input name="submit" value="Chat Again" class="resend-chat-request" type="button"></div>
+                        <p></p>
+                    </div>
+                </div>
+            
+
+          <div class="chat-window-footer">
+            <div class="social-icon">
+              <a href="https://www.facebook.com/zandocambodia" target="_blank" class="fb-link"><i class="icon-facebook"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://twitter.com/" target="_blank" class="twitter-link" style="display: none;"><i class="icon-twitter"></i></a>
+            </div>
+            <div class="social-icon">
+              <a href="https://instagram.com/" target="_blank" class="instagram-link" style="display: none;"><i class="icon-instagram"></i></a>
+            </div>
+          <div class="footer-text">
+            <span>Powered by</span>
+            <a href="https://www.revechat.com/powered-by-reve-chat/?partner=zandokh.com&amp;utm_source=chat_window&amp;utm_medium=referral&amp;utm_campaign=www.revechat.com" target="_blank"><img src="./revechat-logo-v4.svg"></a>
+          </div></div></div>
+        </div>
+        <!-- end post chat greetings form -->
+
+
+
+            <!-- incoming message container template -->
+            <div class="second-chat-message hidden" id="second-chat-msg-tmpl">
+                <i class="icon icon_profile_1" style="float: left"></i>
+                <div class="msgbox secondbox">
+                    <p style="text-align: justify; margin-top: 0;">
+                        <b>Name Here</b>
+                        <br> message here
+                    </p>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+
+        <!-- outgoing message container template -->
+            <div class="first-chat-message hidden" id="first-chat-msg-tmpl">
+                <i class="icon icon_profile_2" style="float: left"></i>
+                <div class="msgbox firstbox" style="background: rgb(22, 138, 255);">
+                    <p style="text-align: justify; margin-top: 0;">
+                        <b>Name Here</b>
+                        <br> message here
+                    </p>
+                </div>
+                <i class="icon icon_profile_2" style="float: left"></i>
+                <div style="clear:both"></div>
+            </div>
+
+            <!-- file/attachment container template -->
+            <div class="file-msg hidden" id="image-file">
+            <div>
+                <i class="icon icon_profile_1"></i>
+                <div class="msg-thumb">
+                    <a href="https://zandokh.com/index" target="_blank" class="ui-link">
+                    <img src="https://zandokh.com/index">
+                    </a>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="msg-details"></div>
+            </div>
+
+
+            <div class="file-msg multi-files hidden" id="text-file">
+                <div>
+                </div>
+                <div class="multi-files-name-wrapper">
+                    <div class="msg-details">
+
+                    <a href="https://zandokh.com/index" target="_blank" class="ui-link">  </a>
+
+                    </div>
+
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <!-- Audio container -->
+            <div class="file-msg multi-files hidden" id="audio-file">
+                <div class="multi-files-name-wrapper">
+                    <div class="reve-chat-client-audio-player"> <!-- id = "1"-->
+                        <div class="audio-controls">
+                            <button type="button" class="btn-toggle-pause ui-btn ui-shadow ui-corner-all">
+                                <i class="icon-play-fill play"></i> 
+                                <i class="icon-pause-fill pause"></i>
+                            </button>
+                        </div>
+                        <div class="audiowave"></div> <!-- have to set unique id--> <!-- id = "audiowave1"-->
+                        <div class="duration"></div> <!-- have to set unique id-->  <!-- id = "duration1"-->     
+                    </div>
+                </div>
+            </div>
+
+            <!-- voice/video call log container -->
+            <div class="voice-msg hidden" id="voice-msg">
+                <div>
+                    <span class="sending-time"></span>
+                </div>
+                <div>
+                    <i class="icon-phone-handset"></i>
+                </div>
+                <div class="voice-call-duration" style="text-align:right"></div>
+            </div>
+
+            <!-- video call log container -->
+            <div class="voice-msg hidden" id="video-msg">
+                <div>
+                    <span class="sending-time"></span>
+                </div>
+                <div>
+                    <i class="icon-camera-video"></i>
+                </div>
+                <div class="voice-call-duration" style="text-align:right"></div>
+            </div>
+
+            <!-- co-browsing log container -->
+            <div class="voice-msg hidden" id="co-browsing-msg">
+                <div>
+                    <span class="sending-time"></span>
+                </div>
+                <div>
+                    <div class="notification co-browsing-notification"><img alt="img" src="./co-browse.png"></div>
+                </div>
+                <div class="co-browsing-duration" style="text-align:right"></div>
+            </div>
+
+
+            <div class="typing_status hidden" id="typing-msg"></div>
+            <div class="progress hidden"></div>
+
+
+            <!-- modal prompt template -->
+
+
+
+
+            <!--
+            <div id="modal-email-input-content" class="modal">
+                <p>Enter your email address</p>
+                <input type="type" class="client-email" placeholder="Email address" />
+                <p style="color:black; display:none" class="error-status">  </p>
+                <p style="margin-bottom:10px;"></p>
+                <input type="button" class="send-email" value="Send" />
+                <input type="button" class="close-modal-btn" value="Close" />
+            </div>
+            -->
+
+            <div id="alert-window">
+                <p id="alert-status-message"></p>
+                <br>
+                <div class="ui-btn ui-input-btn ui-corner-all ui-shadow">Ok<input type="button" id="alert-ok" value="Ok"></div>
+            </div>
+
+                <!-- connect/reconnect message container  -->
+            <div id="disconnect-container" style="display: none">
+                <div class="disconnected_toast_container">
+                    <div class="revechat_toast_Disconnected disconnected_toast" style="-moz-user-select: none;">
+                        <div class="revechat_toast_disconnected_Image reconnecting_toast_image">
+                            <div class="revechat_toast_disconnected_image_Dot dot gray"></div>
+                            <div class="revechat_toast_disconnected_image_Dot dot gray"> </div>
+                            <div class="revechat_toast_disconnected_image_Dot dot gray"> </div>
+                        </div>
+                        <div class="reconnecting_toast_text jx_ui_Widget">Reconnecting</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- voice video control panel -->
+
+            <audio id="remoteAudioPlayer" autoplay="" controls="" style="display:none"></audio>
+                        <!-- Start of Tone players -->
+                        <audio id="connectTonePlayer" style="display:none" preload="none">
+                            <!-- html5 audio supporting browsers will use this player -->
+                            <source id="connectToneSource" type="audio/mpeg" src="https://static.revechat.com/client/sound/connectTone.mp3">
+                        </audio>
+                        <audio id="ringTonePlayer" loop="" style="display:none" preload="none">
+                            <!-- html5 audio supporting browsers will use this player -->
+                            <source id="ringToneSource" type="audio/mpeg" src="https://static.revechat.com/client/sound/cellphone_ring_tone_2.mp3">
+                        </audio>
+                        <audio id="progressTonePlayer" loop="" style="display:none" preload="none">
+                            <!-- html5 audio supporting browsers will use this player -->
+                            <source id="progressToneSource" type="audio/mpeg" src="https://static.revechat.com/client/sound/progressTone.mp3">
+                        </audio>
+                        <audio id="failTonePlayer" style="display:none" preload="none">
+                            <!-- html5 audio supporting browsers will use this player -->
+                            <source id="failToneSource" type="audio/mpeg" src="https://static.revechat.com/client/sound/failTone.mp3">
+                        </audio>
+                        <!-- End of Tone Players -->
+            <!-- end voice/video control panel -->
+
+            <!--divs for voice and video-->
+            <!--divs for voice and video-->
+            <div id="panelDiv" style="display:none">
+
+            </div>
+        <!-- Finish voice/video panel-->
+
+            </div>
+        </div>
+
+
+        <div class="online-banner-0 online-banner hidden">
+                    <div id="txt0" class="chatArea">
+                        <div class="pageHolder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">   <span id="chatText0">Chat with us</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="online-banner-1 online-banner hidden">
+                    <div id="txt1" class="chatArea">
+                        <div class="pageHolder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatText1">Chat with us</span><i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="online-banner-2 online-banner hidden">
+                    <div id="txt2" class="chatArea">
+                        <div class="pageHolder banner-2" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatText2">Chat with us</span><i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="online-banner-3 online-banner hidden">
+                    <div id="txt3" class="chatArea">
+                        <div class="pageHolder banner-3" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatText3">Chat with us</span><i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="online-banner-4 online-banner hidden">
+                    <div id="txt4" class="chatArea">
+                        <div class="pageHolder banner-4" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatText4">Chat with us</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="online-banner-5 online-banner hidden">
+                <div id="txt5" class="chatArea banner-without-icon">
+                    <div class="pageHolder round-banner banner-5" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+            </div>
+          
+
+            <div class="online-banner-6 online-banner hidden">
+                <div id="txt6" class="chatArea banner-without-icon">
+                    <div class="pageHolder round-banner banner-6" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="online-banner-7 online-banner hidden">
+                <div id="txt7" class="chatArea banner-without-icon">
+                    <div class="pageHolder round-banner banner-7" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="online-banner-8 online-banner hidden">
+                <div>
+                <!-- <span class="icon-chevron-down minimize_custom_banner"></span> -->
+                    <img class="custom-banner-img" alt="custom-banner-img">
+                </div>
+            </div>
+            <div class="online-banner-9 online-banner hidden">
+                <div class="banner-text" id="chatText9" style="display: block;">👋 Chat with us</div>
+                <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                    <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                </div>
+            </div>
+            <div class="online-banner-15 online-banner hidden">
+                <div class="banner-text" id="chatText15" style="display: block;"></div>
+                <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                    <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                </div>
+            </div>
+
+            <div class="online-banner-10 online-banner hidden">
+                <div class="banner-text" id="chatText10" style="display: block;"></div>
+                <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                    <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                </div>
+            </div>
+
+            <div class="online-banner-11 online-banner hidden">
+                <div class="banner-text" id="chatText11" style="display: block;"></div>
+                <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                    <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                </div>
+            </div>
+
+            <div class="mobile-online-banner hidden">
+                <div class="chatArea mobile">
+                    <div class="pageHolder  round-banner" style="background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i style="color: #FFFFFF" class="icon icon-chat-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="offline-banner-0 offline-banner hidden">
+                    <div id="offlineTxt0" class="chatAreaOffline">
+                        <div class="pageHolder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatTextOffline0">Leave us a message</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="offline-banner-1 offline-banner hidden">
+                    <div id="offlineTxt1" class="chatAreaOffline">
+                        <div class="pageHolder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatTextOffline1">Leave us a message</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="offline-banner-2 offline-banner hidden">
+                    <div id="offlineTxt2" class="chatAreaOffline">
+                        <div class="pageHolder banner-2" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatTextOffline2">Leave us a message</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="offline-banner-3 offline-banner hidden">
+                    <div id="offlineTxt3" class="chatAreaOffline">
+                        <div class="pageHolder banner-3" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatTextOffline3">Leave us a message</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offline-banner-4 offline-banner hidden">
+                    <div id="offlineTxt4" class="chatAreaOffline">
+                        <div class="pageHolder banner-4" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);"> <span id="chatTextOffline4">Leave us a message</span> <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offline-banner-5 offline-banner hidden">
+                    <div id="offlineTxt5" class="chatAreaOffline banner-without-icon">
+                        <div class="pageHolder round-banner banner-5" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                            <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                    </div>
+                </div>
+            
+
+        <div class="offline-banner-6 offline-banner hidden">
+                <div id="offlineTxt6" class="chatAreaOffline banner-without-icon">
+                    <div class="pageHolder round-banner banner-6" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+        </div>
+
+            <div class="offline-banner-7 offline-banner hidden">
+                <div id="offlineTxt7" class="chatAreaOffline banner-without-icon">
+                    <div class="pageHolder round-banner banner-7" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="offline-banner-8 offline-banner hidden">
+            <div>
+            <!-- <span class="icon-chevron-down minimize_custom_banner"></span> -->
+                <img class="custom-banner-img" alt="custom-banner-img">
+            </div>
+        </div>
+
+        <div class="offline-banner-9 offline-banner hidden">
+            <div class="banner-text" id="chatTextOffline9" style="display: block;">We are offline now</div>
+            <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+            </div>
+        </div>
+        <div class="offline-banner-15 offline-banner hidden">
+            <div class="banner-text" id="chatTextOffline15" style="display: block;"></div>
+            <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+            </div>
+        </div>
+
+        <div class="offline-banner-10 offline-banner hidden">
+            <div class="banner-text" id="chatTextOffline10" style="display: block;"></div>
+            <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+            </div>
+        </div>
+
+        <div class="offline-banner-11 offline-banner hidden">
+            <div class="banner-text" id="chatTextOffline11" style="display: block;"></div>
+            <div class="pageHolder banner-icon-holder" style="color: rgb(255, 255, 255); background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                <i class="icon icon-chat-circle-fill" style="color: rgb(255, 255, 255);"></i>
+            </div>
+        </div>
+
+        <div class="mobile-offline-banner hidden">
+                <div class="chatAreaOffline mobile">
+                    <div class="pageHolder  round-banner" style="background: linear-gradient(220deg, rgb(22, 138, 255) 100%, rgb(22, 138, 255) 100%);">
+                        <i style="color: #FFFFFF" class="icon icon-chat-circle-fill"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- start custom fields placeholder -->
+            <div class="dummy_question_preview_client" style="display:none">
+                <div class="row pre-chat-form-fields" style="text-align:left;" data-required="0">
+                        <div class="col-md-12 question_preview_inner_container">
+                            <label for="question">Question</label>
+                            <textarea class="form-control ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" name="question" placeholder="Your answer" data-index="-1" type="text"></textarea>
+                        </div>
+                </div>
+            </div>
+
+            <div class="dummy_choice_list_preview_client" style="display:none">
+                <div class="row pre-chat-form-fields" data-required="0">
+                    <div class="col-md-12 choice_list_preview_inner_container">
+                        <label class="list-items-title" for="choice_list_title_preview">Title</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dummy_dropdown_preview_client" style="display:none">
+                <div class="row pre-chat-form-fields" data-required="0">
+                    <div class="col-md-12 dropdown_preview_inner_container">
+                        <label for="dropdown_title_preview">Select list:</label>
+                        <div class="ui-select"><div id="select-31-button" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow"><span class="form-control">&nbsp;</span><select class="form-control">
+                        </select></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dummy_dropdown_preview_client_prechat custom-dropdown" style="display:none">
+                <div class="row pre-chat-form-fields" data-required="0">
+                    <div class="col-md-12 dropdown_preview_inner_container common-select-dropdown">
+                        <label for="dropdown_title_preview">Select list:</label>
+                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="text" selectedintex=""></div>
+                        <ul class="common-select-dropdown-list" style="display: none;">
+                            <li id="defaultDropdownOption" selected="">Select a department (required)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dummy_multiple_choice_preview_client" style="display:none">
+                <div class="row pre-chat-form-fields" data-required="0">
+                    <div class="col-md-12 multiple_choice_list_preview_inner_container">
+                        <label class="list-items-title" for="multiple_choice_list_title_preview">Title</label>
+                    </div>
+                </div>
+            </div>
+    
+
+
+    <!-- <script type="text/javascript" src="https://staging-static.revechat.com/client_2/scripts/merged/client.app.js?3564-3535-235-53-256"> </script> -->
+    <script type="text/javascript" src="./client.app.min.js"> </script>
+    <!-- <script type="text/javascript" src="http://localhost:5500/scripts/merged/client.app.js?11111-3423242134-213-4231-412-34-223411-3423-28383243234-4357-4324173-1239"> </script> -->
+
+
+     
+    
+
+</div><div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style><style type="text/css">body {font-size: 14px;color: #676767;}.light-theme-window-header .icons.chat-close-button i {color: #2b2c33 !important;}.light-theme-window-header .voice-call-div {background: #fff;}.light-theme-window-header .topbar-icon-list li a .icon-camera-video, .light-theme-window-header .topbar-icon-list li a .icon-envelope.extend {font-size: 13px;}.light-theme-window-header .topbar-icon-list li a .icon-screenshare2 {font-size: 15px;top: 1px;}.light-theme-widget-body .chat-window-footer {background: 0 0;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window.agent-will-attend-shortly-window .light-theme-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .chat-window-header .minimize_button i, #reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {line-height: 50px !important;}#reve-chat-widget-body.light-theme-widget-body .right-chat-window-header .minimize_button i {color: #172b43 !important;}#reve-chat-widget-body.light-theme-widget-body #visitor-chat-window .right-chat-window-header .minimize_button i {line-height: normal !important;}.light-theme-window-header .icon-envelope:before {content: "\e91e";}.light-theme-window-header .icon-printer:before {content: "\e921";}.light-theme-window-header .icon-phone-handset:before {content: "\e920";}.light-theme-window-header .icon-camera-video:before {content: "\e91f";}.light-theme-window-header .icon-screenshare2:before {content: "\e91d";}.light-theme-window-header a:hover.tooltips span {top: 36px;}.light-theme-widget-body #chat-launching-window-offline .chat-form-info, .light-theme-widget-body #chat-launching-window-online .chat-form-info, .light-theme-widget-body #queue-message-window .chat-form-info {padding: 17px 30px 0;}.light-theme-widget-body .start-chat-btn-class {left: 30px;right: 30px;}.light-theme-widget-body .submit-btn {border-radius: 4px;min-height: 35px;}.light-theme-widget-body .msgbox {border-radius: 0 14px 14px;}.light-theme-widget-body .msgbox.secondbox {border-radius: 14px 14px 0;}.light-theme-widget-body .or_line {border-bottom: 1px solid #bdc8ce;}#incoming-modal-content, #modal-content {padding: 30px 30px 46px;border-radius: 10px;}#incoming-modal-content button, #modal-content button {border-radius: 4px;box-shadow: none;padding: 8px 12px;}.light-theme-widget-body .post-chat-gretting-wrapper, .light-theme-widget-body .rating-wrapper {padding: 0 20px;}.light-theme-widget-body .queuing-msg-wrapper img {border: none;margin: 0 auto;}.light-theme-widget-body #queuing-msg {line-height: 22px;}a.tooltips span {overflow: visible;}.light-theme-widget-body .intl-tel-input .country-list {max-width: 304px;width: 305px;}.light-theme-widget-body div#dept_dropdown_div::after {top: 3px;}body.rtl .light-theme-widget-body #visitor-chat-window .light-theme-window-header .right-chat-window-header {right: inherit !important;left: 10px;}body.rtl .light-theme-widget-body .topbar-icon-list li a {padding-left: 0;}body.rtl .light-theme-widget-body .icon-new-send::before {transform: rotate(180deg);display: block;}body.rtl .light-theme-widget-body .file-attachmment {left: 40px;right: inherit;top: 20px;}</style></body></html>
